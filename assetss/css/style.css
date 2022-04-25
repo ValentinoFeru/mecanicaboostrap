@@ -203,53 +203,56 @@ textarea {
     letter-spacing: 7px;
 }
 
-.Noticias {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 15px;
-}
-
-.bodyNosotros { 
+.bodyNosotros {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.nosotrosSection { 
+.nosotrosSection {
     background: url(./../media/taller-mecanico.jpg) no-repeat left;
     background-size: 55%;
     overflow: hidden;
     padding: 100px 0;
 }
-.innerContainer { 
+
+.innerContainer {
     width: 55%;
     float: right;
     background-color: #222;
     padding: 150px;
 }
 
-.innerContainer h1 { 
+.innerContainer h1 {
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 900;
     color: #f2f2f2;
 }
 
-.text { 
+.text {
     font-size: 20px;
     color: #efefef9a;
     line-height: 30px;
     text-align: justify;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
-.skills { 
+.skills {
     display: flex;
     justify-content: space-between;
     font-weight: 700;
     font-size: 13px;
     color: azure;
+}
+
+.Noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 135px;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 
@@ -277,40 +280,50 @@ textarea {
         font-size: 25px;
     }
 
-    .Noticias {
-        width: 95%;
-        grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .innerContainer {
+        padding: 80px;
+    }
+    .Noticias { 
+        width: 80%;
+        grid-template-columns: repeat(2,1fr);
         grid-gap: 10px;
     }
 }
 
-@media screen and (max-width:500px) {
-    .Noticias {
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-@media screen and (max-width:1200px) {
-    .innerContainer { 
-        padding: 80px;
-    }
-    
-}
-
 @media screen and (max-width:1000px) {
-    .nosotrosSection { 
+    .nosotrosSection {
         background-size: 100%;
         padding: 100px 40px;
     }
-    .innerContainer { 
+
+    .innerContainer {
         width: 100%;
     }
 }
+
 @media screen and (max-width:600px) {
-    .nosotrosSection { 
+    .nosotrosSection {
         padding: 0;
     }
-    .innerContainer { 
+
+    .innerContainer {
         padding: 60px;
+    }
+
+    .Noticias { 
+        width: 65%;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width:750px) { 
+    .Noticias { 
+        width: 65%;
+        grid-template-columns: repeat(1,1fr);
     }
 }
