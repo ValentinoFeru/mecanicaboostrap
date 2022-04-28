@@ -1,0 +1,344 @@
+@import "variables";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./../media/carbon_fibre.png);
+    overflow-x: hidden;
+}
+
+
+.pieDepagina {
+    width: 100%;
+    background-color: #070a0e;
+}
+
+.pieDepagina .grupo1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 50px 0px;
+}
+
+.pieDepagina .grupo1 .box figure {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pieDepagina .grupo1 .box {
+
+    figure {
+        width: 250px;
+    }
+
+    img {
+        width: 250px;
+    }
+}
+
+.pieDepagina .grupo1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pieDepagina .grupo1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pieDepagina .grupo1 .redSocial a {
+    display: inline-block;
+    text-decoration: none;
+    width: 46px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pieDepagina .grupo1 .redSocial a:hover {
+    color: aqua;
+}
+
+.pieDepagina,
+.grupo2 {
+    background-color: #0d171f;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pieDepagina .grupo2 small {
+    font-size: 15px;
+}
+
+.contactoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.contactoContainer__form {
+    background-color: rgba(160, 49, 9, 0.884);
+    width: 450px;
+    height: fit-content;
+    padding: 10px 20px;
+    border-radius: 7px;
+
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#botonContacto {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+#botonContacto:hover {
+    cursor: pointer;
+    background-color: rgb(19, 18, 18);
+}
+
+.bodyServicios {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogPost {
+    width: (1200px, 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.post {
+    width: calc(33% - 10px);
+    overflow: hidden;
+}
+
+.postImg {
+    width: 100%;
+    border-radius: 6px;
+    transition: .3s linear;
+}
+
+.postContent {
+    background-color: #ffffffdd;
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 6px;
+    transform: translateY(-60px);
+    transition: .3s linear;
+
+
+    h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+.blogDescription {
+    font-size: 15px;
+    font-style: italic;
+    color: cadetblue;
+}
+
+.post:hover .postImg {
+    transform: translateY(20px);
+}
+
+.post:hover .postContent {
+    transform: translateY(-80px);
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 84vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(./../media/Retro-red-car-front-view-FIAT_3840x2160.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#tituloPrincipal {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 50px;
+    font-family: dm;
+    letter-spacing: 7px;
+}
+
+.bodyNosotros {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nosotrosSection {
+    background: url(./../media/taller-mecanico.jpg) no-repeat left;
+    background-size: 55%;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.innerContainer {
+    width: 55%;
+    float: right;
+    background-color: #222;
+    padding: 150px;
+
+
+    h1 {
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #f2f2f2;
+    }
+}
+
+.text {
+    font-size: 20px;
+    color: #efefef9a;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+    color: azure;
+}
+
+.Noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 135px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+
+@media screen and (max-width:1200px) {
+    .innerContainer {
+        padding: 80px;
+    }
+    .Noticias { 
+        width: 80%;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .nosotrosSection {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+
+    .innerContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .nosotrosSection {
+        padding: 0;
+    }
+
+    .innerContainer {
+        padding: 60px;
+    }
+
+    .Noticias { 
+        width: 65%;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width:750px) { 
+    .Noticias { 
+        width: 65%;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .innerContainer {
+      padding: 80px; }
+    .Noticias {
+      width: 80%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px; } }
+  
+  @media screen and (max-width: 1000px) {
+    .nosotrosSection {
+      background-size: 100%;
+      padding: 100px 40px; }
+    .innerContainer {
+      width: 100%; } }
+  
+  @media screen and (max-width: 600px) {
+    .nosotrosSection {
+      padding: 0; }
+    .innerContainer {
+      padding: 60px; }
+    .Noticias {
+      width: 65%;
+      grid-template-columns: repeat(1, 1fr); } }
+  
+  @media screen and (max-width: 750px) {
+    .Noticias {
+      width: 65%;
+      grid-template-columns: repeat(1, 1fr); } }
+  
