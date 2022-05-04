@@ -1,4 +1,8 @@
-@import "variables";
+@import 'variables';
+@import 'piePagina';
+@import 'maps';
+@import 'mixings';
+@import 'navBar';
 
 * {
     padding: 0px;
@@ -11,78 +15,26 @@ body {
     overflow-x: hidden;
 }
 
-
-.pieDepagina {
-    width: 100%;
-    background-color: #070a0e;
-}
-
-.pieDepagina .grupo1 {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
-    padding: 50px 0px;
-}
-
-.pieDepagina .grupo1 .box figure {
-    width: 100px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pieDepagina .grupo1 .box {
-
-    figure {
-        width: 250px;
-    }
-
-    img {
-        width: 250px;
-    }
-}
-
-.pieDepagina .grupo1 .box h2 {
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: green;
     color: white;
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-
-.pieDepagina .grupo1 .box p {
-    color: #efefef;
-    margin-bottom: 10px;
-}
-
-.pieDepagina .grupo1 .redSocial a {
-    display: inline-block;
-    text-decoration: none;
-    width: 46px;
-    height: 45px;
-    line-height: 45px;
-    margin-right: 10px;
-    background-color: #0d2033;
+    border-radius: 50px;
     text-align: center;
-    transition: all 300ms ease;
-}
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
 
-.pieDepagina .grupo1 .redSocial a:hover {
-    color: aqua;
-}
-
-.pieDepagina,
-.grupo2 {
-    background-color: #0d171f;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-
-.pieDepagina .grupo2 small {
-    font-size: 15px;
+    &:hover {
+        text-decoration: none;
+        color: green;
+        background: white;
+    }
 }
 
 .contactoContainer {
@@ -128,11 +80,11 @@ textarea {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     padding: 20px;
-}
 
-#botonContacto:hover {
-    cursor: pointer;
-    background-color: rgb(19, 18, 18);
+    &:hover { 
+        cursor: pointer;
+        background-color: rgb(19, 18, 18);
+    }
 }
 
 .bodyServicios {
@@ -213,6 +165,7 @@ textarea {
     font-size: 50px;
     font-family: dm;
     letter-spacing: 7px;
+    // text-shadow: 7px 5px 5px black;
 }
 
 .bodyNosotros {
@@ -240,12 +193,11 @@ textarea {
         margin-bottom: 30px;
         font-size: 30px;
         font-weight: 900;
-        color: #f2f2f2;
+        color: $colorPrincipal;
     }
 }
 
 .text {
-    font-size: 20px;
     color: #efefef9a;
     line-height: 30px;
     text-align: justify;
@@ -273,9 +225,10 @@ textarea {
     .innerContainer {
         padding: 80px;
     }
-    .Noticias { 
+
+    .Noticias {
         width: 80%;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
     }
 }
@@ -300,45 +253,60 @@ textarea {
         padding: 60px;
     }
 
-    .Noticias { 
+    .Noticias {
         width: 65%;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
-@media screen and (max-width:750px) { 
-    .Noticias { 
+@media screen and (max-width:750px) {
+    .Noticias {
         width: 65%;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media screen and (max-width: 1200px) {
     .innerContainer {
-      padding: 80px; }
+        padding: 80px;
+    }
+
     .Noticias {
-      width: 80%;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px; } }
-  
-  @media screen and (max-width: 1000px) {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
     .nosotrosSection {
-      background-size: 100%;
-      padding: 100px 40px; }
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+
     .innerContainer {
-      width: 100%; } }
-  
-  @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .nosotrosSection {
-      padding: 0; }
+        padding: 0;
+    }
+
     .innerContainer {
-      padding: 60px; }
+        padding: 60px;
+    }
+
     .Noticias {
-      width: 65%;
-      grid-template-columns: repeat(1, 1fr); } }
-  
-  @media screen and (max-width: 750px) {
+        width: 65%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 750px) {
     .Noticias {
-      width: 65%;
-      grid-template-columns: repeat(1, 1fr); } }
-  
+        width: 65%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

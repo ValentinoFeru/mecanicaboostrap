@@ -1,0 +1,109 @@
+.topNav {
+    background: linear-gradient(to bottom, rgb(19, 18, 18) 35%, rgba(19, 18, 18, 0) 100%);
+    overflow: hidden;
+    -webkit-box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+
+        li {
+            padding: 14px 16px;
+            list-style-type: none;
+
+            &:hover { 
+                background-color: $colorPrincipal;
+                color: rgb(0, 0, 0);
+                transition: .3s;
+            }
+
+            a {
+                text-decoration: none;
+                color: #f2f2f2;
+                font-size: 20px;
+                text-align: center;
+                padding: 14px 16px;
+                float: left;
+                font-family: oswald;
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+        }
+
+        #active { 
+            background-color: $colorPrincipal;
+            color: white;
+        }
+    }
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(./../fonts/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: dm;
+    src: url(./../fonts/DMSerifDisplay-Italic.ttf)
+}
+
+.menuIcon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.menuIcon,
+#check {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .checkBtn {
+        display: block;
+    }
+
+    .menuIcon {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .topNav {
+
+        ul { 
+            display: block;
+            position: fixed;
+            top: 70px;
+            left: -100%;
+            background: #222;
+            width: 100%;
+            height: min-content;
+            right: 0;
+            z-index: 999999;
+
+            li { 
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+
+                &:last-child { 
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}

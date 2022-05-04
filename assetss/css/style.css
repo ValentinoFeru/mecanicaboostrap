@@ -1,17 +1,8 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box; }
-
-body {
-  background-image: url(./../media/carbon_fibre.png);
-  overflow-x: hidden; }
-
-.pieDepagina {
+.pieDepagina, .grupo1 {
   width: 100%;
   background-color: #070a0e; }
 
-.pieDepagina .grupo1 {
+.grupo1 {
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -20,29 +11,26 @@ body {
   grid-gap: 50px;
   padding: 50px 0px; }
 
-.pieDepagina .grupo1 .box figure {
+.pieDepagina .grupo1 .box figure, .grupo1 .grupo1 .box figure {
   width: 100px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.pieDepagina .grupo1 .box figure {
+.pieDepagina .grupo1 .box figure img, .grupo1 .grupo1 .box figure img {
   width: 250px; }
 
-.pieDepagina .grupo1 .box img {
-  width: 250px; }
-
-.pieDepagina .grupo1 .box h2 {
+.pieDepagina .grupo1 .box h2, .grupo1 .grupo1 .box h2 {
   color: white;
   margin-bottom: 25px;
   font-size: 20px; }
 
-.pieDepagina .grupo1 .box p {
+.pieDepagina .grupo1 .box p, .grupo1 .grupo1 .box p {
   color: #efefef;
   margin-bottom: 10px; }
 
-.pieDepagina .grupo1 .redSocial a {
+.pieDepagina .grupo1 .redSocial a, .grupo1 .grupo1 .redSocial a {
   display: inline-block;
   text-decoration: none;
   width: 46px;
@@ -53,18 +41,156 @@ body {
   text-align: center;
   transition: all 300ms ease; }
 
-.pieDepagina .grupo1 .redSocial a:hover {
+.pieDepagina .grupo1 .redSocial a:hover, .grupo1 .grupo1 .redSocial a:hover {
   color: aqua; }
 
-.pieDepagina,
-.grupo2 {
+.pieDepagina .grupo2, .grupo1 .grupo2 {
   background-color: #0d171f;
   padding: 15px 10px;
   text-align: center;
   color: #fff; }
 
-.pieDepagina .grupo2 small {
+.pieDepagina .grupo2 small, .grupo1 .grupo2 small {
   font-size: 15px; }
+
+@media screen and (max-width: 800px) {
+  .pieDepagina .grupo1, .grupo1 .grupo1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px; } }
+
+.botontwitter {
+  color: #124ea8; }
+
+.botonfacebook {
+  color: blue; }
+
+.botoninstagram {
+  color: #fb026e; }
+
+.botonYoutube {
+  color: red; }
+
+.letraChica {
+  font-size: 10px;
+  font-weight: 200; }
+
+.letraMediana {
+  font-size: 15px;
+  font-weight: 300; }
+
+.letraGrande {
+  font-size: 20px;
+  font-weight: 400; }
+
+.topNav {
+  background: linear-gradient(to bottom, #131212 35%, rgba(19, 18, 18, 0) 100%);
+  overflow: hidden;
+  -webkit-box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .topNav ul {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0; }
+    .topNav ul li {
+      padding: 14px 16px;
+      list-style-type: none; }
+      .topNav ul li:hover {
+        background-color: rgba(255, 68, 0, 0.623);
+        color: black;
+        transition: .3s; }
+      .topNav ul li a {
+        text-decoration: none;
+        color: #f2f2f2;
+        font-size: 20px;
+        text-align: center;
+        padding: 14px 16px;
+        float: left;
+        font-family: oswald;
+        padding-right: 50px;
+        padding-left: 50px; }
+    .topNav ul #active {
+      background-color: rgba(255, 68, 0, 0.623);
+      color: white; }
+
+@font-face {
+  font-family: oswald;
+  src: url(./../fonts/Oswald-VariableFont_wght.ttf); }
+
+@font-face {
+  font-family: dm;
+  src: url(./../fonts/DMSerifDisplay-Italic.ttf); }
+
+.menuIcon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px; }
+
+.menuIcon,
+#check {
+  display: none; }
+
+@media (max-width: 950px) {
+  .checkBtn {
+    display: block; }
+  .menuIcon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px; }
+  .topNav ul {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: #222;
+    width: 100%;
+    height: min-content;
+    right: 0;
+    z-index: 999999; }
+    .topNav ul li {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      margin: 0; }
+      .topNav ul li:last-child {
+        padding: 2rem; }
+  #check:checked ~ ul {
+    left: 0; } }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+body {
+  background-image: url(./../media/carbon_fibre.png);
+  overflow-x: hidden; }
+
+.btn-wsp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background: green;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100; }
+  .btn-wsp:hover {
+    text-decoration: none;
+    color: green;
+    background: white; }
 
 .contactoContainer {
   display: flex;
@@ -102,10 +228,9 @@ textarea {
   background-color: black;
   color: white;
   padding: 20px; }
-
-#botonContacto:hover {
-  cursor: pointer;
-  background-color: #131212; }
+  #botonContacto:hover {
+    cursor: pointer;
+    background-color: #131212; }
 
 .bodyServicios {
   min-height: 100vh;
@@ -194,10 +319,9 @@ textarea {
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 900;
-    color: #f2f2f2; }
+    color: rgba(255, 68, 0, 0.623); }
 
 .text {
-  font-size: 20px;
   color: #efefef9a;
   line-height: 30px;
   text-align: justify;

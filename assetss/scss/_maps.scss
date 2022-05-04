@@ -1,0 +1,22 @@
+$redes: (
+  twitter: rgb(18, 78, 168),
+  facebook: blue,
+  instagram: rgb(251, 2, 110),
+  youtube: red,
+);
+
+.botontwitter
+{
+    color: map-get($map: $redes, $key:twitter );
+}
+.botonfacebook {
+    color:map-get($map: $redes, $key:facebook ) ;
+}
+
+.botoninstagram {
+    color:map-get($map: $redes, $key:instagram );
+}
+
+.botonYoutube { 
+    color:map-get($map: $redes, $key: youtube);
+}

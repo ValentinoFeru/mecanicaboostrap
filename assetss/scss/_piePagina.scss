@@ -1,0 +1,70 @@
+.pieDepagina { 
+    width: 100%;
+    background-color: #070a0e; 
+}
+
+.grupo1 { 
+    @extend .pieDepagina; 
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 50px 0px;
+}
+
+.pieDepagina .grupo1 .box figure { 
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pieDepagina .grupo1 .box figure img { 
+    width: 250px;
+}
+
+.pieDepagina .grupo1 .box h2 { 
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pieDepagina .grupo1 .box p { 
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pieDepagina .grupo1 .redSocial a { 
+    display: inline-block;
+    text-decoration: none;
+    width: 46px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pieDepagina .grupo1 .redSocial a:hover { 
+    color: aqua;
+}
+
+.pieDepagina .grupo2 { 
+    background-color: #0d171f;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pieDepagina .grupo2 small { 
+    font-size: 15px;
+}
+@media screen and (max-width:800px) {
+    .pieDepagina .grupo1 { 
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px; }
+}
