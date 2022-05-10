@@ -173,6 +173,9 @@ body {
   background-image: url(./../media/carbon_fibre.png);
   overflow-x: hidden; }
 
+.mecanics {
+  width: 180px; }
+
 .btn-wsp {
   position: fixed;
   width: 55px;
@@ -341,13 +344,35 @@ textarea {
   padding-bottom: 15px;
   padding-top: 15px; }
 
+@font-face {
+  font-family: oswald;
+  src: url(./../fonts/Oswald-VariableFont_wght.ttf); }
+
+.navbar-nav .nav-link {
+  font-size: 20px;
+  padding: 28px 32px;
+  font-family: oswald;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-left: 30px; }
+
+.navbar-nav .active {
+  background-color: rgba(255, 68, 0, 0.623);
+  color: white;
+  height: 100%; }
+
 @media screen and (max-width: 1200px) {
   .innerContainer {
     padding: 80px; }
   .Noticias {
     width: 80%;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px; } }
+    grid-gap: 10px; }
+  .blogPost {
+    justify-content: center;
+    flex-direction: column; }
+  .post {
+    width: 600px; } }
 
 @media screen and (max-width: 1000px) {
   .nosotrosSection {

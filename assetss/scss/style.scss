@@ -15,6 +15,10 @@ body {
     overflow-x: hidden;
 }
 
+.mecanics { 
+    width: 180px;
+}
+
 .btn-wsp {
     position: fixed;
     width: 55px;
@@ -81,7 +85,7 @@ textarea {
     color: rgb(255, 255, 255);
     padding: 20px;
 
-    &:hover { 
+    &:hover {
         cursor: pointer;
         background-color: rgb(19, 18, 18);
     }
@@ -220,6 +224,29 @@ textarea {
     padding-top: 15px;
 }
 
+@font-face {
+    font-family: oswald;
+    src: url(./../fonts/Oswald-VariableFont_wght.ttf);
+}
+
+.navbar-nav {
+
+    .nav-link {
+        font-size: 20px;
+        padding: 28px 32px;
+        font-family: oswald;
+        padding-right: 50px;
+        padding-left: 50px;
+        margin-left: 30px;
+    }
+
+    .active {
+        background-color: $colorPrincipal;
+        color: white;
+        height: 100%;
+    }
+
+}
 
 @media screen and (max-width:1200px) {
     .innerContainer {
@@ -230,6 +257,15 @@ textarea {
         width: 80%;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
+    }
+
+    .blogPost {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .post {
+        width: min(600px);
     }
 }
 
