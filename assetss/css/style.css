@@ -84,6 +84,17 @@
   font-size: 20px;
   font-weight: 400; }
 
+nav {
+  padding: 0 !important; }
+
+.navbar-brand img {
+  width: 145px; }
+
+.navbar-bg {
+  background: linear-gradient(to bottom, #131212 35%, rgba(19, 18, 18, 0) 100%);
+  -webkit-box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.2); }
+
 .topNav {
   background: linear-gradient(to bottom, #131212 35%, rgba(19, 18, 18, 0) 100%);
   overflow: hidden;
@@ -291,15 +302,14 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
-
-#tituloPrincipal {
-  text-align: center;
-  color: white;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  font-size: 50px;
-  font-family: dm;
-  letter-spacing: 7px; }
+  #hero h1 {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 50px;
+    font-family: dm;
+    letter-spacing: 7px; }
 
 .bodyNosotros {
   min-height: 100vh;
@@ -349,12 +359,17 @@ textarea {
   src: url(./../fonts/Oswald-VariableFont_wght.ttf); }
 
 .navbar-nav .nav-link {
-  font-size: 20px;
   padding: 28px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
   font-family: oswald;
-  padding-right: 50px;
-  padding-left: 50px;
-  margin-left: 30px; }
+  padding-right: 50px !important;
+  padding-left: 50px !important; }
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(255, 68, 0, 0.623);
+    color: black;
+    transition: .3s; }
 
 .navbar-nav .active {
   background-color: rgba(255, 68, 0, 0.623);
@@ -365,14 +380,16 @@ textarea {
   .innerContainer {
     padding: 80px; }
   .Noticias {
-    width: 80%;
+    justify-content: center;
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px; }
   .blogPost {
     justify-content: center;
     flex-direction: column; }
   .post {
-    width: 600px; } }
+    width: 600px;
+    width: 100%; } }
 
 @media screen and (max-width: 1000px) {
   .nosotrosSection {
@@ -387,39 +404,7 @@ textarea {
   .innerContainer {
     padding: 60px; }
   .Noticias {
+    justify-content: center;
     width: 65%;
-    grid-template-columns: repeat(1, 1fr); } }
-
-@media screen and (max-width: 750px) {
-  .Noticias {
-    width: 65%;
-    grid-template-columns: repeat(1, 1fr); } }
-
-@media screen and (max-width: 1200px) {
-  .innerContainer {
-    padding: 80px; }
-  .Noticias {
-    width: 80%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px; } }
-
-@media screen and (max-width: 1000px) {
-  .nosotrosSection {
-    background-size: 100%;
-    padding: 100px 40px; }
-  .innerContainer {
-    width: 100%; } }
-
-@media screen and (max-width: 600px) {
-  .nosotrosSection {
-    padding: 0; }
-  .innerContainer {
-    padding: 60px; }
-  .Noticias {
-    width: 65%;
-    grid-template-columns: repeat(1, 1fr); } }
-
-@media screen and (max-width: 750px) {
-  .Noticias {
-    width: 65%;
+    display: grid;
     grid-template-columns: repeat(1, 1fr); } }
